@@ -14,7 +14,8 @@
         <link rel="stylesheet" href="assets/css/magnific-popup.css" type="text/css" />
     
         <!-- Uncomment the following line if you have a flexslider.css file -->
-        <!-- <link rel="stylesheet" href="assets/css/flexslider.css" type="text/css"> -->
+        <!-- <link rel="stylesheet" href="assets/css/flexslider.css" type="text/git add .
+          css"> -->
     
         <link rel="stylesheet" href="assets/css/style.css" type="text/css" />
     
@@ -82,7 +83,8 @@
             <div class="row">
               <div class="col-md-8 col-sm-8">
                 <div class="title">
-                  <h2 class="subtitle111">Possession By December,2026 | Call Now : &#160<a href="tel:9811044967"> 9811044967</a> &#160/&#160 <a href="tel:8447618131">8447618131</a></h2>
+                  <h2 class="subtitle111">Possession By December,2026 </h2>
+                  <h3>Call Now : &#160<a class="hidingno" href="tel:9811044967"> 9811044967</a> &#160/&#160 <a class="hidingno" href="tel:8447618131">8447618131</a></h3>
                 </div>
                 <!-- /.title -->
               </div>
@@ -94,14 +96,14 @@
                     <h2>📞<a href="tel:9811044967">9811044967</a></h2>
                   </header>
                   <hr />
-                  <form role="form" id="form-slider" action="./assets/php/subscribe.php" method="post">
+                  <form  id="myForm">
                     <div class="form-group">
                       <label for="name">Your Name<em>*</em></label>
                       <input
                         type="text"
                         class="form-control"
                         id="name"
-                        name="name"
+                        name="from_name"
                         required
                       />
                     </div>
@@ -112,7 +114,7 @@
                         type="email"
                         class="form-control"
                         id="email"
-                        name="email"
+                        name="from_mail"
                         required
                       />
                     </div>
@@ -123,7 +125,7 @@
                         type="text"
                         class="form-control"
                         id="phone"
-                        name="phone"
+                        name="from_phone"
                         required
                       />
                     </div>
@@ -300,15 +302,6 @@
           </div>
           <!-- /.box -->
           <section class="video">
-            <!-- <iframe
-              src="//player.vimeo.com/video/34741214?title=0&amp;byline=0&amp;portrait=0&amp;color=ffffff"
-              width="500"
-              height="281"
-              frameborder="0"
-              webkitallowfullscreen
-              mozallowfullscreen
-              allowfullscreen
-            ></iframe> -->
             <iframe width="944" height="531" src="https://www.youtube.com/embed/afsfynb06gM" title="Mahagun Medalleo | 3 &amp; 4 BHK | Noida Sector 107 | Luxury Project | Main Express Road | Girish Jain" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
           </section>
           <div class="box with-empty-space">
@@ -554,14 +547,22 @@
           <!-- Initialize Swiper -->
           <script>
             var swiper = new Swiper(".swiper-container", {
-              slidesPerView: 4,
+              slidesPerView: 1,
               spaceBetween: 20,
               navigation: {
                 nextEl: ".swiper-button-next",
                 prevEl: ".swiper-button-prev",
               },
+              breakpoints: {
+                // When screen size is above 600px
+                601: {
+                  slidesPerView: 4,
+                },
+              },
             });
           </script>
+          
+          
         </div>
         <!-- /.container -->
       </section>
@@ -614,7 +615,7 @@
             </div>
             <div class="col-md-8 col-sm-8">
               <header><h3>Contact Form</h3></header>
-              <form role="form" id="form-contact" method="post" action="">
+              <form role="form" id="form-contact" method="post" action="./assets/php/contact.php">
                 <div class="row">
                   <div class="col-md-6">
                     <div class="form-group">
@@ -725,5 +726,28 @@
     <script type="text/javascript" src="assets/js/scrollReveal.min.js"></script>
 
     <script type="text/javascript" src="assets/js/custom.js"></script>
+    <script>
+      $('#myForm').on('submit', function(event) {
+    event.preventDefault(); // prevent reload
+     console.log(formData);
+    var formData = new FormData(this);
+    formData.append('service_id', 'service_rl39cat');
+    formData.append('template_id', 'template_n19w7jc');
+    formData.append('user_id', 'JoLdxb-WsCgyh3-OL');
+ 
+    $.ajax('https://api.emailjs.com/api/v1.0/email/send-form', {
+        type: 'POST',
+        data: formData,
+        contentType: false, // auto-detection
+        processData: false // no need to parse formData to string
+    }).done(function() {
+        alert('Your mail is sent!');
+    }).fail(function(error) {
+        alert('Oops... ' + JSON.stringify(error));
+    });
+});
+      
+
+  </script>
   </body>
 </html>

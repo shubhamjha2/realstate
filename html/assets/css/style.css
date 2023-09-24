@@ -909,7 +909,7 @@ p {
 .slider-banner .title h2 {
   margin-bottom: 0px;
   margin-top: 0;
-  font-size: 30px;
+  /* font-size: 30px; */
 }
 .slider-banner .title i {
   color: #ff6f05;
@@ -1434,12 +1434,6 @@ section#properties {
 
 img.main1 {
   height: 100%;
-}
-h2.subtitle111 {
-  display: flex;
-  width: 154%;
-  align-items: center;
-  justify-content: center;
 }
 .google_frm {
   display: flex;
