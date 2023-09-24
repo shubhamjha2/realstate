@@ -1,0 +1,296 @@
+<!DOCTYPE html>
+<html lang="en-US">
+<head lang="en">
+	<meta http-equiv="content-type" content="text/html;charset=utf-8">
+	<title>Condio HTML Documentation Template</title>
+	<!-- Framework CSS -->
+	<link rel="stylesheet" href="assets/blueprint-css/screen.css" type="text/css" media="screen, projection">
+	<link rel="stylesheet" href="assets/blueprint-css/print.css" type="text/css" media="print">
+	<!--[if lt IE 8]><link rel="stylesheet" href="assets/blueprint-css/ie.css" type="text/css" media="screen, projection"><![endif]-->
+	<link rel="stylesheet" href="assets/blueprint-css/plugins/fancy-type/screen.css" type="text/css" media="screen, projection">
+	<style type="text/css" media="screen">
+		p, table, hr, .box { margin-bottom:25px; }
+		.box p { margin-bottom:10px; }
+	</style>
+</head>
+
+
+<body>
+	<div class="container">
+	
+		<h3 class="center alt">&ldquo;Condio&rdquo; Documentation by &ldquo;Theme Starz&rdquo; v1.0.0</h3>
+		
+		<hr>
+		
+		<h1 class="center">&ldquo;Condio HTML Template&rdquo;</h1>
+		
+		<div class="borderTop">
+			<div class="span-6 colborder info prepend-1">
+				<p class="prepend-top">
+					<strong>
+					Created: 02/05/2014<br>
+					By: Theme Starz<br>
+					Email: <a href="mailto:support@theme-starz.com">support@theme-starz.com</a>
+					</strong>
+				</p>
+			</div><!-- end div .span-6 -->		
+	
+			<div class="span-12 last">
+				<p class="prepend-top append-0">Thank you for purchasing my theme. If you have any questions that are beyond the scope of this help file, please feel free to email via my user page contact form <a href="http://themeforest.net/user/themestarz">here</a>. Thanks so much!</p>
+			</div>
+		</div><!-- end div .borderTop -->
+		
+		<hr>
+		
+		<h2 id="toc" class="alt">Table of Contents</h2>
+		<ol class="alpha">
+			<li><a href="#folder-structure">Folder Structure</a></li>
+			<li><a href="#map">Using the map</a></li>
+			<li><a href="#editing-blocks">Block Class</a></li>
+			<li><a href="#editing-source-scss-files">Editing source SCSS Files</a></li>
+			<li><a href="#colors">Colors</a></li>
+			<li><a href="#email">Email Setting</a></li>
+			<li><a href="#classes">CSS Classes You Can use in HTML</a></li>
+		</ol>
+		
+		<hr>
+
+        <h3 id="folder-structure"><strong>Folder Structure</strong></h3>
+        <ul style="margin-bottom: 50px">
+            <li><strong>Documentation</strong> - Folder with this documentation</li>
+            <li><strong>HTML</strong> - Template source files</li>
+        </ul>
+
+        <hr>
+
+        <h3 id="map"><strong>Using the map</strong></h3>
+
+        <p>Condio loads properties data from <code>locations.js</code> file as default. It contains array with properties parameters.</p>
+        <p><strong>Example:</strong></p>
+<pre>
+[
+    "Apartment A3", <em style="color: #7c7c7c">// Title</em>
+    "Area: 220 m<sup>2</sup>", <em style="color: #7c7c7c">// Any subtitle you want</em>
+    "$36,000", <em style="color: #7c7c7c">// Price</em>
+    48.87, <em style="color: #7c7c7c">// Latitude</em>
+    2.29, <em style="color: #7c7c7c">// Longitude</em>
+    "assets/img/property-01.jpg", <em style="color: #7c7c7c">// Property thumbnail image</em>
+],
+</pre>
+
+        <hr>
+
+        <h3 id="editing-blocks"><strong><em>Block</em> Class</strong></h3>
+
+        <p>You can use <em>block</em> class if you want to add padding-up and padding-down to the whole section.</p>
+
+<pre>
+&lt;div class="<strong>block</strong>"&gt;
+    &lt;section id="your-section"&gt;
+        <em style="color: #7c7c7c">// your HTML content</em>
+    &lt;/section&gt;
+&lt;/div&gt;
+</pre>
+        <hr>
+
+        <h3 id="video"><strong>Adding a Video</strong></h3>
+        <p>There are two places where you can place your video:</p>
+        <ul>
+            <li>Slider (as background)</li>
+            <li>Carousel (as pop-up after click)</li>
+        </ul>
+
+        <hr>
+
+        <h3 id="video-slider"><strong>Adding a Video to a Slider</strong></h3>
+
+        <h4><strong>Vimeo Video</strong></h4>
+        <ul>
+            <li>Go to vimeo.com and find your desired video</li>
+            <li>Press <code>"<strong>s</strong>"</code> on the keyboard to open <strong>Share This Video</strong> window</li>
+            <li>Copy the content of <code><strong>&lt;iframe&gt;</strong></code> tag in the <code><strong>Embed</strong></code> input</li>
+            <li>Open one of included <code>index</code> HTML files</li>
+            <li>Find <code><strong>flexslider</strong></code> class</li>
+            <li>In the <code>&lt;li class="slide video"&gt;</code>... paste copied URL link to video</li>
+            <li>Don't forget to add <code><strong>video</strong></code> class to the <code>slide</code></li>
+            <li>Add <code><strong>slider-has-video</strong></code> class in the <code>&lt;body&gt;</code></li>
+        </ul>
+        <p>Whole code should look like:</p>
+<pre>
+&lt;body class="slider-has-video"&gt;
+    ...
+&lt;div class="flexslider"&gt;
+    &lt;ul class="slides"&gt;
+        &lt;li class="slide <strong>video</strong>"&gt;
+            <strong>&lt;iframe src="//player.vimeo.com/video/34741214?title=0&amp;autoplay=1&amp;byline=0&amp;portrait=0&amp;color=ffffff" width="500" height="281" frameborder="0" webkitallowfullscreen mozallowfullscreen allowfullscreen&gt;&lt;/iframe&gt;</strong>
+        &lt;/li&gt;
+    &lt;/ul&gt;
+&lt;/div&gt;
+</pre>
+
+        <h4><strong>Youtube Video</strong></h4>
+        <ul>
+            <li>Go to youtube.com and find your desired video</li>
+            <li>Click on <code>"<strong>Embed</strong>"</code></li>
+            <li>Copy the content of <code><strong>&lt;iframe&gt;</strong></code> tag</li>
+            <li>Open one of included <code>index</code> HTML files</li>
+            <li>Find <code><strong>flexslider</strong></code> class</li>
+            <li>In the <code>&lt;li class="slide video"&gt;</code>... paste copied URL link to video</li>
+            <li>Don't forget to add <code><strong>video</strong></code> class to the <code>slide</code></li>
+            <li>Add <code><strong>slider-has-video</strong></code> class in the <code>&lt;body&gt;</code></li>
+        </ul>
+        <p>Whole code should look like:</p>
+<pre>
+&lt;body class="slider-has-video"&gt;
+    ...
+&lt;div class="flexslider"&gt;
+    &lt;ul class="slides"&gt;
+        &lt;li class="slide <strong>video</strong>"&gt;
+            <strong>&lt;iframe width="420" height="315" src="//www.youtube.com/embed/JH6YY-bzhOA?autoplay=1" frameborder="0" allowfullscreen&gt;&lt;/iframe&gt;</strong>
+        &lt;/li&gt;
+    &lt;/ul&gt;
+&lt;/div&gt;
+</pre>
+        <p>
+            <mark class="note"><strong>Note:</strong></mark> If you have your video shifted a little bit down. open <code>style.css</code> and on the
+            end of the file add <br><code>.fluid-width-video-wrapper { padding-top: 55% !important; }</code> or any other value in percents.
+        </p>
+
+        <hr>
+
+        <h3 id="video-carousel"><strong>Adding a Video to a Carousel</strong></h3>
+        <p>Adding video to a carousel is a little bit easier than adding it to a slider.</p>
+        <ul>
+            <li>Open your desired video on <code>youtube.com</code> or <code>vimeo.com</code></li>
+            <li>Copy the <strong>URL</strong> of the video from browser address bar. <mark>Note:</mark> not the embed video link!</li>
+            <li>Paste this link into <code>&lt;a href="<strong>http://vimeo.com/24506451</strong>" class="video-popup"&gt;</code></li>
+            <li>Make sure that <code>&lt;a href&gt;</code> tag has <code><strong>video-popup</strong></code> class</li>
+        </ul>
+
+        <hr>
+
+        <h3 id="editing-source-scss-files"><strong>Editing source SCSS Files</strong></h3>
+
+        <p>
+            Condio uses an SCSS files for styling. If you want to edit source SCSS files, you need to use an SCSS Compiler. You can use <a href="http://compass.kkbox.com">Compass.app</a> for example
+            Otherwise you can edit regular CSS files located in <strong><em>assets/css</em></strong>
+        </p>
+
+        <hr>
+
+        <h3 id="colors"><strong>Colors</strong></h3>
+
+        <p>To edit colors, you can open SCSS file located at<em>assets/scss/<strong>_variables.scss</strong></em>. But you need mentioned SCSS compiler. Otherwise you can replace all occurrences of
+        the same color in CSS file located at <em>assets/css/<strong>style.css</strong></em></p>
+
+        <hr>
+
+
+        <h3 id="email"><strong>Email Settings</strong></h3>
+        <p>An user can contact you using contact form in the footer. To set e-mail address where you want to receive e-mails and other settings open <strong><em>contact.php</em></strong>
+        located in root directory.</p>
+
+        <strong>contact.php</strong> settings you can change:
+<pre>
+$to = 'hithemestarz@gmail.com'; <em style="color: #7c7c7c">// Here you can set address for receiving emails (usually your email)</em>
+$subject = 'Message From Your Website Contact Form'; <em style="color: #7c7c7c">// Message displayed in "subject" label in email</em>
+</pre>
+        <h4><strong>Email address for reply</strong></h4>
+        <p><strong>Direct reply to users email</strong><br>You can also change, how you want to reply to email. You can set the email <em>"from"</em> to be the email which user has provided in contact form,
+        so you can directly reply him, just to click on "reply" button in your email interface. The code is this:</p>
+<pre>$headers = 'From: ' .$email . "\r\n"; <em style="color: #7c7c7c">// Email "from" the same as user has provided. Default state</em></pre>
+        <p><strong>One incoming email address or "noreply" address</strong><br>Or you can use one address widely known as <em>"noreply@yourdomain.com"</em> and users email address
+        will be displayed in body of the message. Then you need to <em>uncomment</em> (remove "//" dashes) of the commented code and comment the code above.
+            The final code should look like this:</p>
+<pre>
+<em style="color: #7c7c7c">//$headers = 'From: ' .$email . "\r\n";</em>
+
+$headers = 'From: noreply@domain.com' . "\r\n";
+
+$body .= "";
+$body .= "Email: ";
+$body .= $email;
+$body .= "\n";
+</pre>
+        <p><mark>Note:</mark> Your hosting provider has to support PHP in order to make the contact form work.</p>
+        <hr>
+
+        <h3 id="count-down"><strong>Using Countdown</strong></h3>
+        <p>Setting countdown is very easy. Just open <code>custom.js</code> located in <strong>assets/js</strong> and find <code>.count-down</code>.
+        Then on line</p>
+        <p><code>$(".count-down").ccountdown(<strong>2014,12,24,'18:00'</strong>);</code></p>
+        <p>sset your desired date in format:</p>
+        <p><code>$(".count-down").ccountdown(<strong>YEAR,MONTH,DAY,'HOURS:MINUTES'</strong>);</code></p>
+        <strong><mark class="note">Important!</mark></strong> When entering <em>months</em> and <em>days</em>, do not use <em>zero</em>.
+        For example: you want to set <strong>April</strong> as a month. Use number <strong>4</strong> instead of <em>04</em>.
+        Otherwise, the javascript will stop work.
+        <hr>
+
+        <h3 id="classes"><strong>CSS Classes You Can Use in HTML</strong></h3>
+        <p>Condio comes with several prepared CSS classes you can use right in HTML without coding it into CSS. This is helpful
+        if you want to style only one element without affecting others. For example, you have tree headings, but you want only first
+        to be in the white color, second one with opacity and third one will have subheading, so you don't want to have big gap under.
+        HTML code will look like:</p>
+<pre>
+&lt; h2 class="<strong>font-color-light</strong>"&gt;Heading One&lt;/h2&gt;
+&lt; h2 class="<strong>has-opacity</strong>"&gt;Heading Two&lt;/h2&gt;
+&lt; h2 class="<strong>has-subtitle</strong>"&gt;Heading Three&lt;/h2&gt;
+</pre>
+        <p>You can use these predefined classes:</p>
+        <ul>
+            <li><strong>.background-color-grey-light</strong> - set background color of the element to light grey. Use with "block" element</li>
+            <li><strong>.background-color-grey-dark</strong> - set background color of the element to dark grey. Use with "block" element</li>
+            <li><strong>.has-dark-background</strong> - if element has dark background (check above), this class makes all the text white so it's readable</li>
+            <li><strong>.width-10 </strong> - set width of the element to 10%. Use in "box" class. (see below)</li>
+            <li><strong>.width-20 </strong> - set width of the element to 20%. Use in "box" class. (see below)</li>
+            <li><strong>.width-30 </strong> - set width of the element to 30%. Use in "box" class. (see below)</li>
+            <li><strong>.width-40 </strong> - set width of the element to 40%. Use in "box" class. (see below)</li>
+            <li><strong>.width-50 </strong> - set width of the element to 50%. Use in "box" class. (see below)</li>
+            <li><strong>.width-60 </strong> - set width of the element to 60%. Use in "box" class. (see below)</li>
+            <li><strong>.width-70 </strong> - set width of the element to 70%. Use in "box" class. (see below)</li>
+            <li><strong>.width-80 </strong> - set width of the element to 80%. Use in "box" class. (see below)</li>
+            <li><strong>.width-90 </strong> - set width of the element to 90%. Use in "box" class. (see below)</li>
+            <li><strong>.width-100</strong> - set width of the element to 100%. Use in "box" class. (see below)</li>
+            <li><strong>.top-0 </strong> - will move the element 0px from top of original position. (see usage below)</li>
+            <li><strong>.top-10 </strong> - will move the element 10px from top of original position. (see usage below)</li>
+            <li><strong>.top-20 </strong> - will move the element 20px from top of original position. (see usage below)</li>
+            <li><strong>.top-30 </strong> - will move the element 30px from top of original position. (see usage below)</li>
+            <li><strong>.top-40 </strong> - will move the element 40px from top of original position. (see usage below)</li>
+            <li><strong>.top-50 </strong> - will move the element 50px from top of original position. (see usage below)</li>
+            <li><strong>.top-60 </strong> - will move the element 60px from top of original position. (see usage below)</li>
+            <li><strong>.top-70 </strong> - will move the element 70px from top of original position. (see usage below)</li>
+            <li><strong>.top-80 </strong> - will move the element 80px from top of original position. (see usage below)</li>
+            <li><strong>.top-90 </strong> - will move the element 90px from top of original position. (see usage below)</li>
+            <li><strong>.top-100</strong> - will move the element 100px from top of original position. (see usage below)</li>
+            <li><strong>.top-110</strong> - </li>
+            <li><strong>.top-120</strong> - </li>
+            <li><strong>.top-130</strong> - </li>
+            <li><strong>.top-140</strong> - </li>
+            <li><strong>.top-150</strong> - will move the element 150px from top of original position. (see usage below)</li>
+            <li><strong>.top-160</strong> - </li>
+            <li><strong>.top-170</strong> - </li>
+            <li><strong>.top-180</strong> - </li>
+            <li><strong>.top-190</strong> - </li>
+            <li><strong>.top-200</strong> - will move the element 200px from top of original position. (see usage below)</li>
+        </ul>
+        <br><br>
+        <h3>Boxes Creation and Editing</h3>
+        
+        <img src="assets/images/editing-boxes.png">
+
+        <hr>
+
+        <p><strong>Icons used</strong></p>
+        <ul>
+            <li><a href="http://fortawesome.github.io/Font-Awesome/">Font Awesome</a></li>
+        </ul>
+
+		<p>Once again, thank you so much for purchasing this theme. As I said at the beginning, I'd be glad to help you if you have any questions relating to this theme. No guarantees, but I'll do my best to assist. If you have a more general question relating to the themes on ThemeForest, you might consider visiting the forums and asking your question in the "Item Discussion" section.</p> 
+		
+		<p class="append-bottom alt large"><strong>Theme Starz</strong></p>
+		<p><a href="#toc">Go To Table of Contents</a></p>
+		
+		<hr class="space">
+	</div><!-- end div .container -->
+</body>
+</html>
