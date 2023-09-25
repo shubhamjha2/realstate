@@ -1392,11 +1392,13 @@ input[type="text"]:focus, input[type="text"]:active, input[type="email"]:focus, 
   .top-130, .top-140, .top-150, .top-160, .top-170, .top-180, .top-190, .top-200 {
     margin-top: 0 !important;
   }
-
-  .slider-banner .title {
-    margin-bottom: 70px;
-    text-align: center;
+  .custom-column {
+    flex-direction: column;
   }
+  
+  .slider-banner .title {
+    content-visibility: hidden;
+}
   .slider-banner .title i {
     -moz-transform: rotate(90deg);
     -ms-transform: rotate(90deg);
@@ -1444,3 +1446,4 @@ img.main1 {
   z-index: 100;
   width: 112%;
   border-radius: 15px;
+}
