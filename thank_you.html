@@ -1,16 +1,23 @@
 <!DOCTYPE html>
 <html lang="en">
   <head>
+    <!-- Google tag (gtag.js) -->
+    <script
+      async
+      src="https://www.googletagmanager.com/gtag/js?id=AW-11325681728"
+    ></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag() {
+        dataLayer.push(arguments);
+      }
+      gtag("js", new Date());
+
+      gtag("config", "AW-11325681728");
+    </script>
     <meta charset="UTF-8" />
-    <meta
-      name="viewport"
-      content="width=device-width, initial-scale=1.0"
-    />
-    <link
-      rel="icon"
-      href="assets/img/favicon.ico"
-      type="image/x-icon"
-    />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="icon" href="assets/img/favicon.ico" type="image/x-icon" />
     <title>Thank You</title>
     <link
       href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.7/dist/tailwind.min.css"
@@ -46,7 +53,7 @@
 
       /* Button styling */
       .go-home {
-        background: #4CAF50; /* Green color */
+        background: #4caf50; /* Green color */
         border: none;
         padding: 15px 20px; /* Adjust button size here */
         margin: 30px auto 0; /* Center the button horizontally */
@@ -62,9 +69,9 @@
       }
 
       .go-home a {
-        font-family: 'Raleway', Arial Black;
+        font-family: "Raleway", Arial Black;
         font-size: 1rem;
-        font-weight: 700!important;
+        font-weight: 700 !important;
         text-transform: uppercase;
         letter-spacing: 2px;
         text-decoration: none;
@@ -86,11 +93,7 @@
       <!-- Added double border with white color -->
       <div class="bg-white shadow-md rounded-lg p-8">
         <!-- Logo -->
-        <img
-          src="./assets/img/404-tick.png"
-          alt="Your Logo"
-          class="logo"
-        />
+        <img src="./assets/img/404-tick.png" alt="Your Logo" class="logo" />
 
         <!-- Thank You message and contact info -->
         <div class="message-container">
@@ -100,13 +103,9 @@
           </p>
           <p>
             You can directly call us at
-            <a href="tel:9811044967" style="color: blue"
-              >9811044967</a
-            >
+            <a href="tel:9811044967" style="color: blue">9811044967</a>
             /
-            <a href="tel:8447618131" style="color: blue"
-              >8447618131</a
-            >
+            <a href="tel:8447618131" style="color: blue">8447618131</a>
           </p>
           <!-- Added Go Home button below phone numbers -->
           <div class="go-home">
