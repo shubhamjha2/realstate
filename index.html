@@ -137,12 +137,11 @@
                         id="form-slider-submit"
                         class="btn btn-default"
                       >
-                        Get Notified!
-                      </button>
+                          Get Notified!
+                        </button>
                     </div>
                     <!-- /.form-group -->
                   </form>
-                  
                   <!-- /#form-slider -->
                   <figure>*Required Fields</figure>
                 </div>
@@ -615,7 +614,7 @@
             </div>
             <div class="col-md-8 col-sm-8">
               <header><h3>Contact Form</h3></header>
-              <form role="form" id="form-contact" method="post" action="./assets/php/contact.php">
+              <form id="myForm1">
                 <div class="row">
                   <div class="col-md-6">
                     <div class="form-group">
@@ -624,7 +623,7 @@
                         type="text"
                         class="form-control"
                         id="contact-form-name"
-                        name="contact-form-name"
+                        name="contact-name"
                         required
                       />
                     </div>
@@ -640,7 +639,7 @@
                         type="email"
                         class="form-control"
                         id="contact-form-email"
-                        name="contact-form-email"
+                        name="contact-email"
                         required
                       />
                     </div>
@@ -659,7 +658,7 @@
                         class="form-control"
                         id="contact-form-message"
                         rows="6"
-                        name="contact-form-message"
+                        name="contact-message"
                         required
                       ></textarea>
                     </div>
@@ -727,27 +726,44 @@
 
     <script type="text/javascript" src="assets/js/custom.js"></script>
     <script>
-      $('#myForm').on('submit', function(event) {
-    event.preventDefault(); // prevent reload
-     console.log(formData);
-    var formData = new FormData(this);
-    formData.append('service_id', 'service_rl39cat');
-    formData.append('template_id', 'template_n19w7jc');
-    formData.append('user_id', 'JoLdxb-WsCgyh3-OL');
- 
-    $.ajax('https://api.emailjs.com/api/v1.0/email/send-form', {
-        type: 'POST',
-        data: formData,
-        contentType: false, // auto-detection
-        processData: false // no need to parse formData to string
-    }).done(function() {
-        alert('Your mail is sent!');
-    }).fail(function(error) {
-        alert('Oops... ' + JSON.stringify(error));
-    });
-});
-      
-
+      $('#myForm').on('submit', function (event) {
+          event.preventDefault(); // Prevent reload
+          var formData = new FormData(this);
+          formData.append('service_id', 'service_xmth6xu');
+          formData.append('template_id', 'template_vrz491k');
+          formData.append('user_id', 'rcGJCc8gqzsoBkuyz');
+  
+          $.ajax('https://api.emailjs.com/api/v1.0/email/send-form', {
+              type: 'POST',
+              data: formData,
+              contentType: false, 
+              processData: false 
+          }).done(function () {
+              window.open('./thank_you.html', '_blank');
+          }).fail(function (error) {
+              alert('Oops... ' + JSON.stringify(error));
+          });
+      });
+  </script>
+    <script>
+      $('#myForm1').on('submit', function (event) {
+          event.preventDefault(); // Prevent reload
+          var formData = new FormData(this);
+          formData.append('service_id', 'service_xmth6xu');
+          formData.append('template_id', 'template_vsa0qy4');
+          formData.append('user_id', 'rcGJCc8gqzsoBkuyz');
+  
+          $.ajax('https://api.emailjs.com/api/v1.0/email/send-form', {
+              type: 'POST',
+              data: formData,
+              contentType: false, 
+              processData: false 
+          }).done(function () {
+              window.open('./thank_you.html', '_blank');
+          }).fail(function (error) {
+              alert('Oops... ' + JSON.stringify(error));
+          });
+      });
   </script>
   </body>
 </html>

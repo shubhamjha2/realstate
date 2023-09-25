@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1.0"
+    />
+    <link
+      rel="icon"
+      href="assets/img/favicon.ico"
+      type="image/x-icon"
+    />
+    <title>Thank You</title>
+    <link
+      href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.7/dist/tailwind.min.css"
+      rel="stylesheet"
+    />
+    <style>
+      /* Custom CSS for the message and logo container */
+      .message-container {
+        text-align: center;
+        margin-top: 20px;
+        color: #333;
+      }
+
+      /* Logo styling */
+      .logo {
+        max-width: 150px; /* Adjust the max-width as needed */
+        max-width: 60px;
+        margin: 0 auto -15px;
+        border-radius: 50%;
+      }
+
+      .bg-white.shadow-md.rounded-lg.p-8 {
+        border: double;
+        margin: 15px;
+        /* background: lawngreen; */
+      }
+
+      /* Custom CSS for the message */
+      .message {
+        font-size: 1.25rem;
+        color: #333;
+      }
+
+      /* Button styling */
+      .go-home {
+        background: #4CAF50; /* Green color */
+        border: none;
+        padding: 15px 20px; /* Adjust button size here */
+        margin: 30px auto 0; /* Center the button horizontally */
+        border-radius: 5px;
+        cursor: pointer;
+        transition: background-color 0.3s ease; /* Smooth hover effect */
+        display: block; /* Make it a block-level element for centering */
+      }
+
+      .go-home:hover {
+        background: #45a049; /* Darker green on hover */
+        opacity: 0.9;
+      }
+
+      .go-home a {
+        font-family: 'Raleway', Arial Black;
+        font-size: 1rem;
+        font-weight: 700!important;
+        text-transform: uppercase;
+        letter-spacing: 2px;
+        text-decoration: none;
+        color: #fff;
+      }
+
+      /* Responsive styles for larger screens */
+      @media (min-width: 768px) {
+        .message-container {
+          font-size: 1.5rem; /* Increase the font size for larger screens */
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <div
+      class="min-h-screen flex flex-col items-center justify-center bg-black border-white border-2"
+    >
+      <!-- Added double border with white color -->
+      <div class="bg-white shadow-md rounded-lg p-8">
+        <!-- Logo -->
+        <img
+          src="./assets/img/404-tick.png"
+          alt="Your Logo"
+          class="logo"
+        />
+
+        <!-- Thank You message and contact info -->
+        <div class="message-container">
+          <h1 class="text-2xl font-bold text-center mb-6">Thank You!</h1>
+          <p class="text-gray-700 text-center message">
+            Our team will get in touch with you shortly
+          </p>
+          <p>
+            You can directly call us at
+            <a href="tel:9811044967" style="color: blue"
+              >9811044967</a
+            >
+            /
+            <a href="tel:8447618131" style="color: blue"
+              >8447618131</a
+            >
+          </p>
+          <!-- Added Go Home button below phone numbers -->
+          <div class="go-home">
+            <a href="./index.html" style="text-decoration: none">Go Home</a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </body>
+</html>
